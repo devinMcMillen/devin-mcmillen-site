@@ -1,0 +1,10 @@
+.container-background-image {
+  background-image: url("../../../assets/skyscrappers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 93.75vh;
+  width: 100%;
+}
+nav {
+  padding-top: 30%;
+}

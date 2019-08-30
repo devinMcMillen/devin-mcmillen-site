@@ -27,9 +27,6 @@ export class NavbarComponent implements OnInit {
     this.projectsSideBarOptions = NavBarConstants.projectSideBarOptions;
   }
 
-  /**
-   * @description When the Hamburger is displayed, toggle the navBar links.
-   */
   public toggleNavbar(): void {
     this.navBurger.nativeElement.classList.toggle('is-active');
     this.navMenu.nativeElement.classList.toggle('is-active');
