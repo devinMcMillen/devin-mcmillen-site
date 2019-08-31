@@ -1,0 +1,9 @@
+.container-background-image {
+  background-image: url("../../../assets/wood.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  background-position: center;
+}

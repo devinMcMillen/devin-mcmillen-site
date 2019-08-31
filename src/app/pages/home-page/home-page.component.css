@@ -1,10 +1,15 @@
 .container-background-image {
   background-image: url("../../../assets/skyscrappers.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 93.75vh;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
   width: 100%;
+  background-position: center;
 }
-nav {
-  padding-top: 30%;
+.centered-level {
+  margin-top: 37vh;
+}
+a.blue-dropdown {
+  color: blue;
 }
