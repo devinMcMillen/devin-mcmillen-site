@@ -1,0 +1,15 @@
+<h1 class="title is-3">Skills</h1>
+<div class="tags">
+  <div *ngFor="let language of this.professionalLanguagesAndFrameworks">
+    <span class="tag is-medium is-link">{{language}}</span><div class="tag-padding"></div>
+  </div>
+  <div *ngFor="let tool of this.professionalTools">
+      <span class="tag is-medium is-primary">{{tool}}</span><div class="tag-padding"></div>
+  </div>
+  <div *ngFor="let language of this.interestLanguagesAndFrameworks">
+      <span class="tag is-medium is-success">{{language}}</span><div class="tag-padding"></div>
+  </div>
+  <div *ngFor="let tool of this.interestTools">
+      <span class="tag is-medium is-success">{{tool}}</span><div class="tag-padding"></div>
+  </div>
+</div>

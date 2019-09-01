@@ -1,27 +1,37 @@
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { DocumentWrapper } from './../../helpers/document-wrapper';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { NavBarConstants } from 'src/app/temp-constants/temp-constants';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.css'],
+  animations: [
+    // the fade-in/fade-out animation.
+    trigger('simpleFadeAnimation', [
+
+      // the "in" style determines the "resting" state of the element when it is visible.
+      state('in', style({opacity: 1})),
+
+      // fade in when created. this could also be written as transition('void => *')
+      transition(':enter', [
+        style({opacity: 0}),
+        animate(600 )
+      ]),
+
+      // fade out when destroyed. this could also be written as transition('void => *')
+      transition(':leave',
+        animate(600, style({opacity: 0})))
+    ])
+  ]
 })
 export class HomePageComponent implements OnInit {
   navBarElement: HTMLElement;
 
-  dataStructureSideBarOptions: any[];
-  algorithmsSideBarOptions: any[];
-  projectsSideBarOptions: any[];
-
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.dataStructureSideBarOptions = NavBarConstants.dataStructureSideBarOptions;
-    this.algorithmsSideBarOptions = NavBarConstants.algorithmsSideBarOptions;
-    this.projectsSideBarOptions = NavBarConstants.projectSideBarOptions;
-
     this.navBarElement = document.getElementById('mainNavBar');
     this.hideNavBar();
   }

@@ -1,0 +1,12 @@
+<div class="list-container">
+  <h1 class="title is-3">Education</h1>
+  <div *ngFor="let education of this.educationDetails">
+    <h1 class="title is-5"><u>{{education.universityName}}</u></h1>
+    <h2 class="title is-6">{{education.degree}} {{education.degreeFocus}}</h2>
+    <h2 class="subtitle is-6">{{education.startDate}} - {{education.endDate}}</h2>
+    <ul *ngFor="let note of education.educationNotes">
+      <li><p>{{note}}</p></li>
+    </ul>
+  </div>
+</div>
+<br>
